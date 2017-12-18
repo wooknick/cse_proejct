@@ -1,0 +1,16 @@
+DB 생성 쿼리
+1. stock
+CREATE TABLE stock( stock_no int not null auto_increment primary key, stock_code varchar(20) not null, stock_name varchar(30) not null);
+
+2. member
+CREATE TABLE member( member_no int not null auto_increment primary key, member_id varchar(20) not null, member_pw varchar(20) not null, member_name varchar(20) not null)
+
+3. deal
+CREATE TABLE deal( deal_no int not null auto_increment primary key, stock_no int, member_no int, deal_price varchar(20) not null, deal_quantity varchar(20) not null, deal_time timestamp, foreign key(stock_no) references stock(stock_no) on delete cascade on update cascade, foreign key(member_no) references member(member_no) on delete cascade on update cascade);
+
+4. account
+CREATE TABLE account( account_no int not null auto_increment primary key, member_no int, account_init varchar(20), account_balance varchar(20), account_rate varchar(10), account_public boolean not null, account_name varchar(20), foreign key(member_no) references member(member_no) on delete cascade on update cascade);
+
+5. account_state
+CREATE TABLE account_state( account_no int, stock_no int, stock_quantity varchar(20), foreign key(account_no) references account(account_no) on delete cascade on update cascade, foreign key(stock_no) references stock(stock_no) on delete cascade on update cascade);
+
