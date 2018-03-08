@@ -8,7 +8,7 @@
 계좌 개설 시점에 비해 얼만큼의 수익을 올렸는지 확인할 수 있습니다.<br>
 
 ###### 데모 동영상 확인 : [https://youtu.be/5JbXtj4MJHg]
-###### 서비스 주소 : [http://cspro.sogang.ac.kr/~cse20110882/project]
+###### 서비스 주소 : \[중지]
 ----
 ### Setting
 1. db/db.php 내용 수정 후, db/db\_query 내용대로 DB 생성할 것.
